@@ -19,7 +19,7 @@ const initialState: ReducerEmployeeTypes = {
             case GET_EMPLOYEE_SAGA:
                 return { ...state, data: action.data, pagination: { ...state.pagination, total: action.total } }
             case UPDATE_PAGINATION:
-                return { ...state, pagination: action.data }
+                return { ...state, data: [], pagination: action.data }
             default:
                 return state
         }

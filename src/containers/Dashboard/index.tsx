@@ -54,6 +54,7 @@ const DashboardComponent = React.memo((props: DashboardTypes) => {
     }
 
     const onPageChange = (_: React.ChangeEvent<unknown>, p: number) => {
+        if (p === pagination.page) return
         dispatch({
             type: UPDATE_PAGINATION,
             data: {
